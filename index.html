@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun's Food Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Arun's Food Shop</h1>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="dosa1.jpg" alt="Normal Dosa">
+                <h3>Normal Dosa</h3>
+                <p>₹8</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Normal Dosa', -1)">-</button>
+                    <span id="qty-Normal Dosa">0</span>
+                    <button onclick="changeQtyMenu('Normal Dosa', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Normal Dosa',8)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="onion dosa.jpg" alt="Onion Dosa">
+                <h3>Onion Dosa</h3>
+                <p>₹10</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Onion Dosa', -1)">-</button>
+                    <span id="qty-Onion Dosa">0</span>
+                    <button onclick="changeQtyMenu('Onion Dosa', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Onion Dosa',10)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="dosa1.jpg" alt="Special Dosa">
+                <h3>Special Dosa</h3>
+                <p>₹10</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Special Dosa', -1)">-</button>
+                    <span id="qty-Special Dosa">0</span>
+                    <button onclick="changeQtyMenu('Special Dosa', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Special Dosa',10)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="podi idli.jpg" alt="Podi Idli">
+                <h3>Podi Idli</h3>
+                <p>₹7</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Podi Idli', -1)">-</button>
+                    <span id="qty-Podi Idli">0</span>
+                    <button onclick="changeQtyMenu('Podi Idli', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Podi Idli',7)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="idli.jpg" alt="Normal Idli">
+                <h3>Normal Idli</h3>
+                <p>₹5</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Normal Idli', -1)">-</button>
+                    <span id="qty-Normal Idli">0</span>
+                    <button onclick="changeQtyMenu('Normal Idli', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Normal Idli',5)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="mini idli.jpg" alt="Mini Idli">
+                <h3>Mini Idli (1 plate)</h3>
+                <p>₹10</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Mini Idli', -1)">-</button>
+                    <span id="qty-Mini Idli">0</span>
+                    <button onclick="changeQtyMenu('Mini Idli', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Mini Idli',10)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="omlette.png" alt="Omelette">
+                <h3>Omelette</h3>
+                <p>₹10</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Omelette', -1)">-</button>
+                    <span id="qty-Omelette">0</span>
+                    <button onclick="changeQtyMenu('Omelette', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Omelette',10)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="bread omlette.png" alt="Bread Omelette">
+                <h3>Bread Omelette</h3>
+                <p>₹10</p>
+                <div class="qty-control">
+                    <button onclick="changeQtyMenu('Bread Omelette', -1)">-</button>
+                    <span id="qty-Bread Omelette">0</span>
+                    <button onclick="changeQtyMenu('Bread Omelette', 1)">+</button>
+                </div>
+                <button onclick="addToCartFromMenu('Bread Omelette',10)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart panel -->
+    <div id="cart-panel">
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+        <p>Total: ₹<span id="total">0</span></p>
+
+        <h3>Customer Details</h3>
+        <input type="text" id="name" placeholder="Your Name"><br><br>
+        <input type="text" id="phone" placeholder="Phone Number"><br><br>
+        <textarea id="address" placeholder="Enter Your Address"></textarea><br><br>
+        <select id="address-type">
+            <option value="Home">Home</option>
+            <option value="Office">Office</option>
+        </select><br><br>
+
+        <button onclick="placeOrderWhatsApp()">Place Order via WhatsApp</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
